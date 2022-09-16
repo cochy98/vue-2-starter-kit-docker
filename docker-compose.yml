@@ -1,0 +1,10 @@
+version: '3'
+services:
+    vue-docker:
+        image: node
+        tty: true
+        working_dir: /var/www/html
+        ports:
+            - '${APP_PORT:-3001}:3001'
+        volumes:
+            - '.:/var/www/html'
